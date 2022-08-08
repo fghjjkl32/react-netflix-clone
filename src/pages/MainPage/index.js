@@ -1,7 +1,7 @@
-import React from "react";
-import Banner from "../../components/Banner";
-import Row from "../../components/Row";
-import requests from "../../api/requests";
+import React from "react"
+import Banner from "../../components/Banner"
+import Row from "../../components/Row"
+import requests from "../../api/requests"
 
 export default function MainPage() {
   return (
@@ -21,5 +21,5 @@ export default function MainPage() {
         fetchUrl={requests.fetchActionMovies}
       />
     </div>
-  );
+  )
 }

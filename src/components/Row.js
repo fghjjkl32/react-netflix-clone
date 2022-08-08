@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from "react";
-import axios from "../api/axios";
-import MovieModal from "./MovieModal";
-import "./Row.css";
+import React, { useEffect, useState } from "react"
+import axios from "../api/axios"
+import MovieModal from "./MovieModal"
+import "./Row.css"
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
 
 export default function Row({ isLargeRow, title, id, fetchUrl }) {
-  const [movies, setMovies] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [movieSelected, setMovieSelected] = useState({});
+  const [movies, setMovies] = useState([])
+  const [modalOpen, setModalOpen] = useState(false)
+  const [movieSelected, setMovieSelected] = useState({})
 
   useEffect(() => {
-    fetchMovieData();
-  }, []);
+    fetchMovieData()
+  }, [])
 
   const fetchMovieData = async () => {
-    const request = await axios.get(fetchUrl);
-    console.log("request", request);
-    setMovies(request.data.results);
-  };
+    const request = await axios.get(fetchUrl)
+    console.log("request", request)
+    setMovies(request.data.results)
+  }
 
   const handleClick = (movie) => {
-    setModalOpen(true);
-    setMovieSelected(movie);
-  };
+    setModalOpen(true)
+    setMovieSelected(movie)
+  }
 
   return (
     <section className="row">
@@ -59,7 +59,7 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
             slidesPerGroup: 3,
           },
         }}
-        navigation  // arrow 버튼 사용 유무
+        navigation // arrow 버튼 사용 유무
         pagination={{ clickable: true }} // 페이지 버튼 보이게 할지
       >
         <div id={id} className="row__posters">
@@ -84,11 +84,12 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
         <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
       )}
     </section>
-  );
+  )
 }
 
 // eslint-disable-next-line no-lone-blocks
-{/* <section className="row">
+{
+  /* <section className="row">
 <h2>{title}</h2>
 <div className="slider">
   <div className="slider__arrow-left">
@@ -129,4 +130,5 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
 {modalOpen && (
   <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
 )}
-</section> */}
+</section> */
+}

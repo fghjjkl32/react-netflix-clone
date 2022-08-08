@@ -1,7 +1,7 @@
 {
   "name": "react-netflix-clone",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://fghjjkl32.github.io/react-netflix-clone",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -36,12 +36,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -55,6 +49,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-testing-library": "^5.6.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1"
   }
 }

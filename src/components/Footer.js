@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 export default function Footer() {
   return (
@@ -22,14 +22,12 @@ export default function Footer() {
             </FooterLink>
           </FooterLinkContent>
           <FooterDescContainer>
-                <FooterDescRights>
-                    Netflix Rights Reserved.
-                </FooterDescRights>
+            <FooterDescRights>Netflix Rights Reserved.</FooterDescRights>
           </FooterDescContainer>
         </FooterLinkContainer>
       </FooterContent>
     </FooterContainer>
-  );
+  )
 }
 
 const FooterContainer = styled.div`
@@ -46,9 +44,9 @@ const FooterContainer = styled.div`
     padding: 20px 20px;
     padding-bottom: 30px;
   }
-`;
+`
 
-const FooterContent = styled.div``;
+const FooterContent = styled.div``
 
 const FooterLinkContainer = styled.div`
   width: 500px;
@@ -56,12 +54,12 @@ const FooterLinkContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`;
+`
 
 const FooterLinkTitle = styled.h1`
   color: gray;
   font-size: 17px;
-`;
+`
 
 const FooterLinkContent = styled.div`
   display: flex;
@@ -72,7 +70,7 @@ const FooterLinkContent = styled.div`
   @media (max-width: 768px) {
     margin-top: 26px;
   }
-`;
+`
 
 const FooterLink = styled.a`
   color: gray;
@@ -88,16 +86,16 @@ const FooterLink = styled.a`
   @media (max-width: 768px) {
     margin-bottom: 16px;
   }
-`;
+`
 
 const FooterDescContainer = styled.div`
   margin-top: 30px @media (max-width: 768px) {
     margin-top: 20px;
   }
-`;
+`
 
 const FooterDescRights = styled.h2`
   color: white;
   font-size: 14px;
   text-align: center;
-`;
+`

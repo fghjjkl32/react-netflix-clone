@@ -1,6 +1,6 @@
-import React, { useRef, useCallback } from "react";
-import "./MovieModal.css";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import React, { useRef, useCallback } from "react"
+import "./MovieModal.css"
+import useOnClickOutside from "../../hooks/useOnClickOutside"
 
 function MovieModal({
   backdrop_path,
@@ -12,11 +12,11 @@ function MovieModal({
   vote_average,
   setModalOpen,
 }) {
-  const ref = useRef();
+  const ref = useRef()
 
   useOnClickOutside(ref, () => {
-      setModalOpen(false);
-  });
+    setModalOpen(false)
+  })
 
   return (
     <div className="presentation">
@@ -45,7 +45,7 @@ function MovieModal({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default MovieModal;
+export default MovieModal
