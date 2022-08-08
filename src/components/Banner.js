@@ -56,7 +56,9 @@ export default function Banner() {
             >
               Play
             </button>
-            <button className="banner__button info">More Information</button>
+            <button className="banner__button info" data-testid="test_text">
+              More Information
+            </button>
           </div>
 
           <h1 className="banner__description">
