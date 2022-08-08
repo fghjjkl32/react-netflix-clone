@@ -21,6 +21,7 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
 
   useEffect(() => {
     fetchMovieData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const fetchMovieData = async () => {
